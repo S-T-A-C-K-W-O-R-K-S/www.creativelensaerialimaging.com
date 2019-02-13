@@ -11,10 +11,10 @@ $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 // Create the email and send the message
-$to = "info@creativelensaerialimaging.com"; // Add your email address inbetween the quote marks. This is where the form will send an email to.
+$to = "enquiries@creativelensaerialimaging.com"; // Add your email address inbetween the quote marks. This is where the form will send an email to.
 $subject = "Website Contact Form:  $name";
 $body = "You have received a new message from your website's contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: inquiries@creativelensaerialimaging.com\n"; // This is the email address the generated message will be from. We recommend using "noreply@yourdomain.com".
+$header = "From: noreply@creativelensaerialimaging.com\n"; // This is the email address the generated message will be from. We recommend using "noreply@yourdomain.com".
 $header .= "Reply-To: $email";	
 
 if(!mail($to, $subject, $body, $header))
